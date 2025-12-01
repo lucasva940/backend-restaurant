@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tarjetas",
+  "info": {
+    "singularName": "tarjeta",
+    "pluralName": "tarjetas",
+    "displayName": "tarjeta"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title_tarjeta": {
+      "type": "string"
+    },
+    "info_tarjeta": {
+      "type": "text"
+    },
+    "smallTitle_tarjeta": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  }
+}
