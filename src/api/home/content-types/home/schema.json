@@ -63,6 +63,12 @@
     },
     "info_blog": {
       "type": "text"
+    },
+    "button_1": {
+      "type": "string"
+    },
+    "url_1": {
+      "type": "string"
     }
   }
 }

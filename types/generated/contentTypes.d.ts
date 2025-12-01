@@ -442,6 +442,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
   };
   attributes: {
     banner: Schema.Attribute.Media<'files' | 'images'>;
+    button_1: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -467,6 +468,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    url_1: Schema.Attribute.String;
   };
 }
 
