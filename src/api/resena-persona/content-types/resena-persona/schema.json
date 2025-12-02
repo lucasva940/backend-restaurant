@@ -23,6 +23,12 @@
     },
     "nombre": {
       "type": "text"
+    },
+    "title": {
+      "type": "string"
+    },
+    "info": {
+      "type": "text"
     }
   }
 }
