@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "datos",
+  "info": {
+    "singularName": "dato",
+    "pluralName": "datos",
+    "displayName": "dato"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "numero": {
+      "type": "string"
+    },
+    "info": {
+      "type": "string"
+    },
+    "fassada": {
+      "type": "string"
+    }
+  }
+}
