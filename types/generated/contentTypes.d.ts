@@ -472,6 +472,8 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
   };
   attributes: {
     banner: Schema.Attribute.Media<'files' | 'images'>;
+    boton2: Schema.Attribute.String;
+    boton3: Schema.Attribute.String;
     button_1: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -501,6 +503,8 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     url: Schema.Attribute.String;
     url_1: Schema.Attribute.String;
+    url2: Schema.Attribute.String;
+    url3: Schema.Attribute.String;
   };
 }
 

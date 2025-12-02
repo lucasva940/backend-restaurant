@@ -75,6 +75,18 @@
     },
     "url": {
       "type": "string"
+    },
+    "boton2": {
+      "type": "string"
+    },
+    "url2": {
+      "type": "string"
+    },
+    "boton3": {
+      "type": "string"
+    },
+    "url3": {
+      "type": "string"
     }
   }
 }
