@@ -541,6 +541,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    image2: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     info_blog: Schema.Attribute.Text;
     info_resenas: Schema.Attribute.Text;
     info_servicio: Schema.Attribute.Text;
