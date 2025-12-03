@@ -773,7 +773,7 @@ export interface ApiTarjetaTarjeta extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     precio: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    tipos: Schema.Attribute.Relation<'oneToMany', 'api::tipo.tipo'>;
+    tipos: Schema.Attribute.Relation<'manyToMany', 'api::tipo.tipo'>;
     title_tarjeta: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -829,7 +829,7 @@ export interface ApiTipoTipo extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::tipo.tipo'> &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    tarjeta: Schema.Attribute.Relation<'manyToOne', 'api::tarjeta.tarjeta'>;
+    tarjetas: Schema.Attribute.Relation<'manyToMany', 'api::tarjeta.tarjeta'>;
     tipo: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

@@ -14,9 +14,9 @@
     "tipo": {
       "type": "string"
     },
-    "tarjeta": {
+    "tarjetas": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::tarjeta.tarjeta",
       "inversedBy": "tipos"
     }

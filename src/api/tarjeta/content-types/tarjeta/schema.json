@@ -30,9 +30,9 @@
     },
     "tipos": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::tipo.tipo",
-      "mappedBy": "tarjeta"
+      "mappedBy": "tarjetas"
     }
   }
 }
