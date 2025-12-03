@@ -629,6 +629,7 @@ export interface ApiNavardNavard extends Struct.CollectionTypeSchema {
       true
     >;
     name: Schema.Attribute.String;
+    numero: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -662,6 +663,9 @@ export interface ApiResenaPersonaResenaPersona
       Schema.Attribute.Private;
     nombre: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
+    puntuacion: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
