@@ -4,7 +4,7 @@
   "info": {
     "singularName": "resena-persona",
     "pluralName": "resena-personas",
-    "displayName": "reseña_persona"
+    "displayName": "resena_persona"
   },
   "options": {
     "draftAndPublish": true
