@@ -23,6 +23,12 @@
     },
     "title": {
       "type": "string"
+    },
+    "button": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
     }
   }
 }

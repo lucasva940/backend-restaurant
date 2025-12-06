@@ -556,6 +556,37 @@ export interface ApiEquipoEquipo extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiFooterLocationFooterLocation
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'footer_locations';
+  info: {
+    displayName: 'footer_location';
+    pluralName: 'footer-locations';
+    singularName: 'footer-location';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::footer-location.footer-location'
+    > &
+      Schema.Attribute.Private;
+    location: Schema.Attribute.String;
+    numero: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiFooterFooter extends Struct.CollectionTypeSchema {
   collectionName: 'footers';
   info: {
@@ -611,6 +642,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    resena: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     smallTitle_blog: Schema.Attribute.String;
     smallTitle_especial: Schema.Attribute.String;
     smallTitle_nosotros: Schema.Attribute.String;
@@ -771,9 +803,6 @@ export interface ApiResenaPersonaResenaPersona
       Schema.Attribute.Private;
     nombre: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
-    puntuacion: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -824,6 +853,7 @@ export interface ApiServicioServicio extends Struct.CollectionTypeSchema {
   };
   attributes: {
     banner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    button: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -838,6 +868,7 @@ export interface ApiServicioServicio extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    url: Schema.Attribute.String;
   };
 }
 
@@ -1506,6 +1537,7 @@ declare module '@strapi/strapi' {
       'api::blog.blog': ApiBlogBlog;
       'api::dato.dato': ApiDatoDato;
       'api::equipo.equipo': ApiEquipoEquipo;
+      'api::footer-location.footer-location': ApiFooterLocationFooterLocation;
       'api::footer.footer': ApiFooterFooter;
       'api::home.home': ApiHomeHome;
       'api::icono.icono': ApiIconoIcono;
