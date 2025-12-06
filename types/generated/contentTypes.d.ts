@@ -442,27 +442,42 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
   };
   attributes: {
     banner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    banner4: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    banner5: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
     button: Schema.Attribute.String;
+    button4: Schema.Attribute.String;
+    button5: Schema.Attribute.String;
     buttone2: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     info2: Schema.Attribute.String;
     info3: Schema.Attribute.Text;
+    info4: Schema.Attribute.Text;
+    info5: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::about.about'> &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     smallTitle: Schema.Attribute.String;
     smallTitle2: Schema.Attribute.String;
+    smalTitle4: Schema.Attribute.String;
+    smalTitle5: Schema.Attribute.String;
     title: Schema.Attribute.String;
     title2: Schema.Attribute.String;
     title3: Schema.Attribute.String;
+    title4: Schema.Attribute.String;
+    title5: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     url: Schema.Attribute.String;
     url2: Schema.Attribute.String;
+    url4: Schema.Attribute.String;
+    url5: Schema.Attribute.String;
   };
 }
 
@@ -642,7 +657,6 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    resena: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     smallTitle_blog: Schema.Attribute.String;
     smallTitle_especial: Schema.Attribute.String;
     smallTitle_nosotros: Schema.Attribute.String;

@@ -53,6 +53,56 @@
     },
     "info3": {
       "type": "text"
+    },
+    "title4": {
+      "type": "string"
+    },
+    "smalTitle4": {
+      "type": "string"
+    },
+    "info4": {
+      "type": "text"
+    },
+    "button4": {
+      "type": "string"
+    },
+    "url4": {
+      "type": "string"
+    },
+    "banner4": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title5": {
+      "type": "string"
+    },
+    "smalTitle5": {
+      "type": "string"
+    },
+    "info5": {
+      "type": "text"
+    },
+    "button5": {
+      "type": "string"
+    },
+    "url5": {
+      "type": "string"
+    },
+    "banner5": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }
