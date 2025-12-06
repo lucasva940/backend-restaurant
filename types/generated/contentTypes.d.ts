@@ -631,6 +631,32 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiIconoIcono extends Struct.CollectionTypeSchema {
+  collectionName: 'iconos';
+  info: {
+    displayName: 'icono';
+    pluralName: 'iconos';
+    singularName: 'icono';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    icono: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::icono.icono'> &
+      Schema.Attribute.Private;
+    nombre: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiLogoLogo extends Struct.CollectionTypeSchema {
   collectionName: 'logos';
   info: {
@@ -795,31 +821,16 @@ export interface ApiServicioServicio extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    asientos: Schema.Attribute.String;
     banner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    comida: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    decoracion: Schema.Attribute.String;
-    foto: Schema.Attribute.String;
-    icono: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    icono2: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    icono3: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    icono4: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
-    icono5: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    icono6: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::servicio.servicio'
     > &
       Schema.Attribute.Private;
-    pastel: Schema.Attribute.String;
-    pista: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
@@ -1495,6 +1506,7 @@ declare module '@strapi/strapi' {
       'api::equipo.equipo': ApiEquipoEquipo;
       'api::footer.footer': ApiFooterFooter;
       'api::home.home': ApiHomeHome;
+      'api::icono.icono': ApiIconoIcono;
       'api::logo.logo': ApiLogoLogo;
       'api::menu.menu': ApiMenuMenu;
       'api::navard.navard': ApiNavardNavard;
