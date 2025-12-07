@@ -29,12 +29,6 @@
     },
     "info": {
       "type": "text"
-    },
-    "url": {
-      "type": "string"
-    },
-    "button": {
-      "type": "string"
     }
   }
 }

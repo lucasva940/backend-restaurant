@@ -103,6 +103,12 @@
         "videos",
         "audios"
       ]
+    },
+    "button6": {
+      "type": "string"
+    },
+    "url6": {
+      "type": "string"
     }
   }
 }

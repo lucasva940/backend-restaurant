@@ -447,6 +447,7 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
     button: Schema.Attribute.String;
     button4: Schema.Attribute.String;
     button5: Schema.Attribute.String;
+    button6: Schema.Attribute.String;
     buttone2: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -475,6 +476,7 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
     url2: Schema.Attribute.String;
     url4: Schema.Attribute.String;
     url5: Schema.Attribute.String;
+    url6: Schema.Attribute.String;
   };
 }
 
@@ -833,7 +835,6 @@ export interface ApiServiceService extends Struct.SingleTypeSchema {
   };
   attributes: {
     banner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    button: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -850,7 +851,6 @@ export interface ApiServiceService extends Struct.SingleTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    url: Schema.Attribute.String;
   };
 }
 
