@@ -601,33 +601,6 @@ export interface ApiFooterLocationFooterLocation
   };
 }
 
-export interface ApiFooterFooter extends Struct.CollectionTypeSchema {
-  collectionName: 'footers';
-  info: {
-    displayName: 'footer';
-    pluralName: 'footers';
-    singularName: 'footer';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::footer.footer'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiHomeHome extends Struct.SingleTypeSchema {
   collectionName: 'homes';
   info: {
@@ -963,6 +936,7 @@ export interface ApiTarjetaTarjeta extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    descripcion: Schema.Attribute.Text;
     image: Schema.Attribute.Media<'images' | 'files'>;
     info_tarjeta: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -1552,7 +1526,6 @@ declare module '@strapi/strapi' {
       'api::dato.dato': ApiDatoDato;
       'api::equipo.equipo': ApiEquipoEquipo;
       'api::footer-location.footer-location': ApiFooterLocationFooterLocation;
-      'api::footer.footer': ApiFooterFooter;
       'api::home.home': ApiHomeHome;
       'api::icono.icono': ApiIconoIcono;
       'api::logo.logo': ApiLogoLogo;
