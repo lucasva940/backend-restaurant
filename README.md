@@ -11,30 +11,66 @@ Este proyecto utilizó Inteligencia Artificial únicamente para la extensión de
 En general el resto del proyecto debería estar libre de IA.
 
 ## Configuración Para Iniciar el Proyecto
+## 🛠️ Guía de Instalación y Configuración
 
-Luego de clonar el proyecto, se debe crear un archivo llamado `.env` en la carpeta raiz del proyecto (`/backend-restaurant`), escribiendo lo siguiente dentro de su contenido:
+Sigue estos pasos para replicar el entorno de desarrollo localmente.
 
-```env
-HOST=0.0.0.0
-PORT=1337
-APP_KEYS=H+xk3zfybj3BhzQ0roMgtw==,haE0z6LlWnjiTuVpQCHLzg==,k8C5t6IV+OOBBK0liQslIg==,HE8FJ2E/dvoEvJnJ81/Bhg==
-API_TOKEN_SALT=n+v5tVkANO311nIt8+zGfw==
-ADMIN_JWT_SECRET=GAz+LZzPkOzRFlhTuHDD2w==
-TRANSFER_TOKEN_SALT=O+jKdFSB9eNfcZLOOGCeKw==
-ENCRYPTION_KEY=nugBbi2goRTBgS2HZunzbw==
-DATABASE_CLIENT=postgres
-DATABASE_HOST=ep-super-mouse-actb6a9d-pooler.sa-east-1.aws.neon.tech
-DATABASE_PORT=5432
-DATABASE_NAME=restaurantbackend
-DATABASE_USERNAME=neondb_owner
-DATABASE_PASSWORD=npg_bILTM2zNOwD3
-DATABASE_SSL=true
-DATABASE_FILENAME=
-JWT_SECRET=JeGhekMYsOIvvcbceKcL9Q==
+### Prerrequisitos
+* Node.js (v18 o superior)
+* npm o yarn
+* Una cuenta en GitHub
+* Una cuenta en Neon.tech
+
+---
+
+### Paso 1: Configuración de Base de Datos (Neon)
+Dado que Neon es una base de datos *serverless* en la nube, no requiere instalación local, solo configuración:
+
+1. Accede a [Neon Console](https://console.neon.tech).
+2. Crea un **Nuevo Proyecto**.
+3. Selecciona la versión de **Postgres** y la región deseada.
+4. Una vez creado, copia el **Connection String** (cadena de conexión) del dashboard.
+
+---
+
+### Paso 2: Instalación de Strapi
+Instalación del CMS y configuración del cliente de base de datos.
+
 ```
-Seguidamente de crear este archivo, se debe abrir una nueva terminal y ejecutar los siguientes comandos:
+npx create-strapi-app@latest nombre-del-proyecto
 
-npm install
+Elegir custom y PostgreSQL
+
+se Responde a la terminal de la siguiente manera:
+
+Database name:
+
+Escribe:el nombre que salga al final de el link de Neon
+
+Host:
+
+Escribir solo la dirección (sin postgres:// y sin el usuario):
+
+Ejemplo: ep-cool-app.us-east-2.aws.neon.tech
+
+Port:
+
+Escribe: 5432 
+
+Username:
+
+Copia el usuario del string de Neon 
+
+Password:
+
+Copiar la contraseña larga de Neon. 
+
+Enable SSL connection:
+
+IMPORTANTE: Seleccionar Yes. Neon requiere SSL.
+```
+
+para poder iniciar el proyecto se uso el comando
 
 npm run develop
 
