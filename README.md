@@ -1,61 +1,52 @@
-# 🚀 Getting started with Strapi
+# Proyecto Restaurante Dinely
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+Proyecto final para la asignatura de Programación. Sitio web para restaurante ficticio creado con Astro e implementado con Strapi y TailwindCSS.
 
-### `develop`
+## ¡IMPORTANTE!
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+Este proyecto utilizó Inteligencia Artificial únicamente para la extensión de párrafos de los blogs y la creación de imágenes para los productos. En términos de código, se utilizó para resolver el tema de llamar relaciones desde Astro a Strapi, como "categoría":
 
+`category={item.tipos?.[0]?.tipo ?? 'General'}`
+
+En general el resto del proyecto debería estar libre de IA.
+
+## Configuración Para Iniciar el Proyecto
+
+Luego de clonar el proyecto, se debe crear un archivo llamado `.env` en la carpeta raiz del proyecto (`/backend-restaurant`), escribiendo lo siguiente dentro de su contenido:
+
+```env
+HOST=0.0.0.0
+PORT=1337
+APP_KEYS=H+xk3zfybj3BhzQ0roMgtw==,haE0z6LlWnjiTuVpQCHLzg==,k8C5t6IV+OOBBK0liQslIg==,HE8FJ2E/dvoEvJnJ81/Bhg==
+API_TOKEN_SALT=n+v5tVkANO311nIt8+zGfw==
+ADMIN_JWT_SECRET=GAz+LZzPkOzRFlhTuHDD2w==
+TRANSFER_TOKEN_SALT=O+jKdFSB9eNfcZLOOGCeKw==
+ENCRYPTION_KEY=nugBbi2goRTBgS2HZunzbw==
+DATABASE_CLIENT=postgres
+DATABASE_HOST=ep-super-mouse-actb6a9d-pooler.sa-east-1.aws.neon.tech
+DATABASE_PORT=5432
+DATABASE_NAME=restaurantbackend
+DATABASE_USERNAME=neondb_owner
+DATABASE_PASSWORD=npg_bILTM2zNOwD3
+DATABASE_SSL=true
+DATABASE_FILENAME=
+JWT_SECRET=JeGhekMYsOIvvcbceKcL9Q==
 ```
+Seguidamente de crear este archivo, se debe abrir una nueva terminal y ejecutar los siguientes comandos:
+
+npm install
+
 npm run develop
-# or
-yarn develop
-```
 
-### `start`
+El proyecto correrá en http://localhost:1337
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
+Integrantes y Contribuciones
+Este proyecto fue desarrollado de manera colaborativa. A continuación se detalla la responsabilidad principal de cada uno:
+### Responsabilidad principal de cada uno:
 
-```
-npm run start
-# or
-yarn start
-```
-
-### `build`
-
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
-
-```
-npm run build
-# or
-yarn build
-```
-
-## ⚙️ Deployment
-
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
-
-```
-yarn strapi deploy
-```
-
-## 📚 Learn more
-
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
-
----
-
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+| Integrante | Rol Principal | Contribuciones Específicas |
+| :--- | :--- | :--- |
+| **Nataly Bahamonde** | Líder del Proyecto / Líder Frontend | Desarrollo de la arquitectura de componentes, lógica de consumo de datos (API Fetch), implementación de rutas dinámicas y maquetación general. |
+| **Krishna Colivoro** | Frontend Setup y Configuración Responsive | Configuración inicial del proyecto (Astro + TailwindCSS), estructura de carpetas, configuración responsive. |
+| **Lucas Vásquez** | Líder Backend | Configuración de Strapi, creación de Content Types. |
+| **Antonieta Torres** | Manejo de Contenido Backend | Generación y organización de todo el contenido dinámico del sitio. |
